@@ -17,11 +17,11 @@ On https://app.linc.sh/sites/zetta-demo you can click any of the preview links t
 
 ## Step 2: Make a change & see Github + Slack integration
 
-If you want to configure Slack integration you can go to https://app.linc.sh/sites/zetta-demo/settings#integrations and install Slack and select a channel to push updates to. Alternatively, here is what an update looks like:
+If you want to configure Slack integration you can go to https://app.linc.sh/sites/zetta-demo/settings#integrations and install Slack and select a channel to push updates to. Alternatively, here is what an update [looks like](https://raw.githubusercontent.com/bitgenics/zetta-demo/master/Slack_integration.png)
 
-Next up is making a change. Go to `src/App.js` and click `edit`. It is the pencil in the top right corner. (image)
+Next up is making a change. Go to `src/App.js` and click `edit`. It is the pencil in the top right corner. [(image)](https://raw.githubusercontent.com/bitgenics/zetta-demo/master/Screenshot_20191101_202353.png)
 Above line 27 insert `transform: "rotate(180deg)",` (image)
-And when you save, make sure you commit it to a branch, such as `flipped_gifs`. (image)
+And when you save, make sure you commit it to a branch, such as `flipped_gifs`. [(image)](https://raw.githubusercontent.com/bitgenics/zetta-demo/master/Screenshot_20191101_202516.png)
 
 If you go to https://app.linc.sh/sites/zetta-demo, the commit should be picked up by Linc and is already building it.
 
@@ -32,10 +32,10 @@ One of the things we are doing is making sure all the information is pushed out 
 
 ## Step 3: See the feedback extension in action
 
-The next feature we want to show off is our beta feedback tool. If you install the Chrome extension at https://chrome.google.com/webstore/detail/linc-feedback/hepgmgeaphkfkocdjbanggnnldlbaakm it will pop up a Linc logo on every preview link you are. And if you click on it it will give you a form to fill out with name and comment and it will upload that feedback comment with a screenshot and other browser data and send that straight to Linc and the relevant Pull Request in Github.
+The next feature we want to show off is our beta feedback tool. If you install the [Linc Chrome extension](https://chrome.google.com/webstore/detail/linc-feedback/hepgmgeaphkfkocdjbanggnnldlbaakm) it will pop up a Linc logo on every preview link you are. And if you click on it it will give you a form to fill out with name and comment and it will upload that feedback comment with a screenshot and other browser data and send that straight to Linc and the relevant Pull Request in Github.
 
-An image of the feedback in action can be is here.
+Here is an [image of the feedback tool](https://raw.githubusercontent.com/bitgenics/zetta-demo/master/Screenshot_20191101_202755.png)
 
 ## Step 4: Releasing
 
-We haven't enabled production releases, but if we would have all it would take to release the change you made earlier is a merge to master.
+We haven't enabled production releases, but if we would have all it would take to release the change you made earlier is a merge to master and it would be available to your customers in seconds.
