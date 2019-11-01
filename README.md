@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Linc Demo
 
-## Available Scripts
+This is a demo repository to show off some of the functionality of Linc. The corresponding page in Linc is at: https://app.linc.sh/sites/zetta-demo
 
-In the project directory, you can run:
+This repository is already configured properly, so no more set up is required. Configuration is a step that usually takes about 10-30 minutes for most regular setups. 
 
-### `npm start`
+The demo is an application that retrieves all images from a subreddit.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Demo steps
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Step 1: Check out preview links.
 
-### `npm test`
+One of the core features of Linc is to provide teams with a preview link for every commit against every backend. In this demo we have simulated that by making the subreddit configurable. In a real application you would make things like API urls, and api keys for services like Stripe, Sentry and Rollup configurable.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We have already configured a Cats environment that retrieves the images from the CatsGifs subreddit. You can add any other you want on https://app.linc.sh/sites/zetta-demo/environments.
+On https://app.linc.sh/sites/zetta-demo you can click any of the preview links to be taken directly to the preview link against that backend.
 
-### `npm run build`
+## Step 2: Make a change & see Github + Slack integration
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you want to configure Slack integration you can go to https://app.linc.sh/sites/zetta-demo/settings#integrations and install Slack and select a channel to push updates to. Alternatively, here is what an update looks like:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Next up is making a change. Go to `src/App.js` and click `edit`. It is the pencil in the top right corner. (image)
+Above line 27 insert `transform: "rotate(180deg)",` (image)
+And when you save, make sure you commit it to a branch, such as `flipped_gifs`. (image)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you go to https://app.linc.sh/sites/zetta-demo, the commit should be picked up by Linc and is already building it.
 
-### `npm run eject`
+One it is finished you should see a message in your Slack channel with the build and preview information.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+If you now create a pull request on the main screen you will be taken to the Pull Request screen. And here you will see a comment from Linc with all the preview links in there.
+One of the things we are doing is making sure all the information is pushed out to where people already are, rather than forcing them to dig around for it in multiple tools.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Step 3: See the feedback extension in action
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The next feature we want to show off is our beta feedback tool. If you install the Chrome extension at https://chrome.google.com/webstore/detail/linc-feedback/hepgmgeaphkfkocdjbanggnnldlbaakm it will pop up a Linc logo on every preview link you are. And if you click on it it will give you a form to fill out with name and comment and it will upload that feedback comment with a screenshot and other browser data and send that straight to Linc and the relevant Pull Request in Github.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+An image of the feedback in action can be is here.
 
-## Learn More
+## Step 4: Releasing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+We haven't enabled production releases, but if we would have all it would take to release the change you made earlier is a merge to master.
