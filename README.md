@@ -17,7 +17,7 @@ On https://app.linc.sh/sites/zetta-demo you can click any of the preview links t
 
 ## Step 2: Make a change & see Github + Slack integration
 
-If you want to configure Slack integration you can go to https://app.linc.sh/sites/zetta-demo/settings#integrations and install Slack and select a channel to push updates to. Alternatively, here is what an update [looks like](https://raw.githubusercontent.com/bitgenics/zetta-demo/master/Slack_integration.png)
+If you want to configure Slack integration you can go to https://app.linc.sh/sites/zetta-demo/settings/integrations#slack and install Slack and select a channel to push updates to. Alternatively, here is what an update [looks like](https://raw.githubusercontent.com/bitgenics/zetta-demo/master/Slack_integration.png)
 
 Next up is making a change. Go to `src/App.js` and click `edit`. It is the pencil in the top right corner. [(image)](https://raw.githubusercontent.com/bitgenics/zetta-demo/master/Screenshot_20191101_202353.png)
 Above line 27 insert `transform: "rotate(180deg)",` (image)
